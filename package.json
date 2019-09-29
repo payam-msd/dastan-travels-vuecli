@@ -24,6 +24,11 @@
     "node-sass": "^4.9.0",
     "prettier": "^1.18.2",
     "sass-loader": "^7.1.0",
+    "tailwindcss": "^1.1.2",
+    "v-scroll-lock": "^1.0.1",
+    "vue-agile": "^1.0.11",
+    "vue-my-photos": "^1.0.4",
+    "vue-svgicon": "^3.2.6",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -42,7 +47,8 @@
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+    "tailwindcss": "./tailwind.config.js",
+    "autoprefixer": {}
     }
   },
   "browserslist": [
