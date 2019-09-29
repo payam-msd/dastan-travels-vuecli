@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="app">
+    <div id="Hero">
       <agile
         ref="main"
         class="main"
@@ -32,10 +32,22 @@
           <img loading="lazy" :src="slide" />
         </div>
         <template slot="prevButton">
-          <icon name="arrow-left" />
+          <icon
+            class=" text-white"
+            name="arrow-left-circle"
+            stroke-width="2"
+            height="28"
+            width="28"
+          />
         </template>
         <template slot="nextButton">
-          <icon name="arrow-right" />
+          <icon
+            class=" text-white"
+            name="arrow-right-circle"
+            stroke-width="2"
+            height="28"
+            width="28"
+          />
         </template>
       </agile>
     </div>
@@ -45,11 +57,16 @@
 <script>
 export default {
   name: "Hero",
+  mounted() {
+    this.asNavFor1.push(this.$refs.thumbnails);
+    this.asNavFor2.push(this.$refs.main);
+  },
   data() {
     return {
       asNavFor1: [],
       asNavFor2: [],
       options1: {
+        speed: 750,
         dots: false,
         fade: true,
         navButtons: false
@@ -58,6 +75,8 @@ export default {
       options2: {
         autoplay: true,
         centerMode: true,
+        speed: 750,
+
         dots: false,
         navButtons: false,
         slidesToShow: 3,
@@ -79,66 +98,29 @@ export default {
       },
 
       slides: [
-        "https://images.unsplash.com/photo-1453831362806-3d5577f014a4?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-        "https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-        "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-        "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-        "https://images.unsplash.com/photo-1472926373053-51b220987527?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ",
-        "https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-      ],
-      images: [
-        {
-          id: 0,
-          pic: "client-img-1"
-        },
-        {
-          id: 1,
-          pic: "client-img-2"
-        },
-        {
-          id: 2,
-          pic: "client-img-3"
-        },
-        {
-          id: 3,
-          pic: "client-img-4"
-        },
-        {
-          id: 4,
-          pic: "client-img-5"
-        },
-        {
-          id: 6,
-          pic: "client-img-7"
-        },
-        {
-          id: 7,
-          pic: "client-img-8"
-        },
-        {
-          id: 8,
-          pic: "client-img-9"
-        },
-        {
-          id: 9,
-          pic: "client-img-10"
-        }
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738806/client-img-10_cfpkh7.webp",
+        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738806/client-img-9_vqrjo1.webp",
+        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738803/client-img-8_pip7rg.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738802/client-img-3_fua2ay.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738805/client-img-7_fajmch.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738803/client-img-5_scqua5.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738803/client-img-1_jgx3cy.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738802/client-img-2_udcbze.webp",
+        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738802/client-img-4_f2bbc9.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738801/client-img-6_r6q0nx.webp"
       ]
     };
-  },
-  mounted() {}
+  }
 };
 </script>
 <style>
 .main {
-  /* margin-bottom: 5px; */
-  margin: 5px;
+  margin: 6px;
 }
 
 .thumbnails {
-  margin: 0 5px;
-  width: calc(100% - 11px);
+  margin: 0 4px;
+  width: calc(100% - 10px);
 }
 
 .agile__nav-button {
@@ -156,34 +138,10 @@ export default {
   transform: translateY(-50%);
 }
 .thumbnails .agile__nav-button--prev {
-  left: -45px;
+  left: 25px;
 }
 .thumbnails .agile__nav-button--next {
-  right: -45px;
-}
-.agile__nav-button:hover {
-  color: #888;
-}
-.agile__dot {
-  margin: 0 10px;
-}
-.agile__dot button {
-  background-color: #eee;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: block;
-  height: 10px;
-  font-size: 0;
-  line-height: 0;
-  margin: 0;
-  padding: 0;
-  transition-duration: 0.3s;
-  width: 10px;
-}
-.agile__dot--current button,
-.agile__dot:hover button {
-  background-color: #888;
+  right: 25px;
 }
 
 .slide {
@@ -197,8 +155,6 @@ export default {
 .slide--thumbniail {
   cursor: pointer;
   height: 100px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   padding: 0 2px;
   transition: opacity 0.3s;
 }
@@ -213,7 +169,5 @@ export default {
   object-position: center;
   width: 100%;
   border-radius: 6px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 </style>

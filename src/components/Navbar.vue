@@ -9,7 +9,7 @@
     py-2 lg:px-16 lg:py-1"
   >
     <div class="flex-1 flex justify-between items-center">
-      <a href="#">
+      <a href="#Hero">
         <svg
           width="32"
           height="36"
@@ -44,28 +44,29 @@
           <li>
             <a
               class="lg:p-4 py-3 px-0 anim-prop block border-b-2 border-transparent hover:border-gray-500"
-              href="#"
+              href="#Detail"
               >Features</a
             >
           </li>
           <li>
             <a
               class="lg:p-4 py-3 px-0 block anim-prop border-b-2 border-transparent hover:border-gray-500"
-              href="#"
+              href="#Gallery"
               >Gallery</a
             >
           </li>
           <li>
             <a
               class="lg:p-4 py-3 px-0 block anim-prop border-b-2 border-transparent hover:border-gray-500"
-              href="#"
+              href="#SocialMedia"
               >Social Media</a
             >
           </li>
         </ul>
       </nav>
 
-      <button
+      <a
+        href="#SignUp"
         class="bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 px-4 rounded inline-flex items-center"
       >
         <icon
@@ -76,7 +77,7 @@
           stroke-width="1.4"
         />
         <span>Sign-up</span>
-      </button>
+      </a>
     </div>
   </header>
 </template>

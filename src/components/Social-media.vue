@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="SocialMedia">
     <h1
       class="text-xl lg:text-4xl  uppercase text-gray-700 text-center pt-40  pb-4 "
     >

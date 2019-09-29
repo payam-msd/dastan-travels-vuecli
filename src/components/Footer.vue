@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="Footer">
     <div class="bg-gray-900 props2 pb-24 pt-16">
       <div class="block flex justify-center items-center ">
         <img

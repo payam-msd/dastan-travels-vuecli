@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="SignUp">
     <div class="w-full bg-red-500 h-auto p-6 lg:p-16">
       <div
         class="h-auto lg:h-80 lg:bg-cover lg:bg-center rounded-lg shadow-2xl bg-gray-100 props text-center"
@@ -11,15 +11,17 @@
           class="pb-20 px-8 lg:px-10 lg:w-1/2 lg:py-16"
         >
           <div class="py-12 lg:py-0">
-            <h1
-              class="text-blue-100 lg:text-gray-800 p-4 rounded-lg bg-blue-800 lg:bg-transparent text-3xl lg:text-4xl shadow-lg lg:shadow-none uppercase lg:pb-12"
-            >
-              sign up now
+            <h1 class="text-3xl uppercase text-gray-800 pb-0 lg:pb-12">
+              sign up
+              <span class="text-sm text-gray-700 block capitalize px-12"
+                >by registring you will recieve newsletter and the latest tours
+                we offer
+              </span>
             </h1>
           </div>
           <div class="lg:ml-16 ">
             <label
-              class="block text-left text-gray-800 font-bold text-sm tracking-wider "
+              class="block text-left text-gray-800  text-sm tracking-wider "
               for="fullname"
             >
               <icon class="mb-1" name="user" height="28" width="28" />
@@ -36,7 +38,7 @@
           />
           <div class="lg:ml-16 mt-8">
             <label
-              class="block text-left text-gray-800 text-sm font-bold tracking-wider "
+              class="block text-left text-gray-800 text-sm  tracking-wider "
               for="email"
             >
               <icon class="mb-1" name="mail" height="28" width="28" />
