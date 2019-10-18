@@ -1,8 +1,28 @@
 <template>
   <div id="app">
+    <SplashScreen :isLoading="isLoading" />
     <router-view />
   </div>
 </template>
+<script>
+import SplashScreen from "@/components/SplashScreen.vue";
+export default {
+  name: "App",
+  data() {
+    return {
+      isLoading: true
+    };
+  },
+  components: {
+    SplashScreen
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 10000);
+  }
+};
+</script>
 <style>
 @import url("https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap");
 #app {

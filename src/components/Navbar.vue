@@ -2,8 +2,8 @@
   <header
     :class="[
       showNavbar ? 'navbar--showed' : 'navbar--hidden',
-      lastScrollPosition > 80 ? 'fixed inset-x-0 z-40 top-0' : 'relative',
-      lastScrollPosition == 0 ? 'relative' : ''
+      lastScrollPosition > 80 ? 'fixed w-full z-40 top-0' : 'relative',
+      { relative: lastScrollPosition == 0 }
     ]"
     class="shadow-md rounded-b-lg bg-white flex flex-wrap items-center px-6
     py-2 lg:px-16 lg:py-1"

@@ -79,13 +79,13 @@
               />
             </g>
           </svg>
-          <img
+          <!-- <img
             class="w-1/2 h-56 ml-56 mt-20 rounded-lg absolute inset-center shadow-2xl z-20 cursor-pointer "
             src="@/assets/images/client-img-8.webp"
             :title="imageList[0].desc1"
             @click="showLightbox(image1)"
-          />
-          <img
+          /> -->
+          <!-- <img
             class="w-1/2 rounded absolute inset-center mt-4 shadow-2xl z-10   cursor-pointer"
             src="@/assets/images/client-img-2.webp"
             :title="imageList[1].desc2"
@@ -96,7 +96,7 @@
             src="@/assets/images/client-img-3.webp"
             :title="imageList[2].desc3"
             @click="showLightbox(image3)"
-          />
+          /> -->
 
           <lightbox
             id="mylightbox"
@@ -115,10 +115,6 @@
 export default {
   data() {
     return {
-      thumbnailDir: "_nuxt/assets/images/",
-      image1: "client-img-8.webp",
-      image2: "client-img-2.webp",
-      image3: "client-img-3.webp",
       imageList: [
         {
           name: "client-img-8.webp",
