@@ -98,16 +98,16 @@ export default {
       },
 
       slides: [
-        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738806/client-img-10_cfpkh7.webp",
-        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738806/client-img-9_vqrjo1.webp",
-        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738803/client-img-8_pip7rg.webp",
-        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738802/client-img-3_fua2ay.webp",
-        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738805/client-img-7_fajmch.webp",
-        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738803/client-img-5_scqua5.webp",
-        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738803/client-img-1_jgx3cy.webp",
-        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738802/client-img-2_udcbze.webp",
-        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738802/client-img-4_f2bbc9.webp",
-        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1569738801/client-img-6_r6q0nx.webp"
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562370/client-img-10_1_asbbfb.webp",
+        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562312/client-img-9_1_magmx4.webp",
+        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562258/client-img-8_1_qoxzwt.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571561966/client-img-3_1_qhsxmz.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562211/client-img-7_1_ik7x2x.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562093/client-img-5_1_qimmco.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571561733/client-img-1_1_pk3ip6.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571561885/client-img-2_1_qencbx.webp",
+        // "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562031/client-img-4_1_k0zfzc.webp",
+        "https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562143/client-img-6_1_idhztt.webp"
       ]
     };
   }
