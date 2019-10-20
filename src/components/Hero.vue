@@ -13,7 +13,7 @@
           class="slide"
           :class="`slide--${index}`"
         >
-          <img loading="lazy" :src="slide" />
+          <img :src="slide" />
         </div>
       </agile>
       <agile
@@ -29,7 +29,7 @@
           :class="`slide--${index}`"
           @click="$refs.thumbnails.goTo(index)"
         >
-          <img loading="lazy" :src="slide" />
+          <img :src="slide" />
         </div>
         <template slot="prevButton">
           <icon
@@ -73,7 +73,7 @@ export default {
       },
 
       options2: {
-        autoplay: true,
+        autoplay: false,
         centerMode: true,
         speed: 750,
 
