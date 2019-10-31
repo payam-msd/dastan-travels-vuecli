@@ -1,58 +1,22 @@
 <template>
-	<md-card>
-		<md-card-media>
-			<swiper :options="swiperOptionTop" class="px-1" ref="swiperTop">
-				<swiper-slide class="`slide-${i}`" v-for="(slide, i) in slides" :key="i">
-					<img
-						class="rounded h-75 my-1 w-full object-cover bg-center bg-cover overflow-hidden md:my-2"
-						:src="slide"
-						alt
-					/>
-				</swiper-slide>
-			</swiper>
-			<template v-if="!isMobile">
-				<swiper
-					:options="swiperOptionThumbs"
-					class="swiperThumb px-1"
-					ref="swiperThumbs"
-				>
-					<swiper-slide v-for="(slide, i) in slides" :key="i" class="`slide-${i}`">
-						<img
-							class="rounded h-20 object-cover bg-center bg-cover w-full md:h-32"
-							:src="slide"
-							alt
-						/>
-					</swiper-slide>
-				</swiper>
+	<div>
+		<carousel>
+			<template v-for="(slide, i) in slides">
+				<slide :perPageCustom="[[768, 1], [1024, 1]]" :key="i">
+					<img :src="slide" alt />
+				</slide>
 			</template>
-		</md-card-media>
-	</md-card>
+		</carousel>
+	</div>
 </template>
 
 <script>
-import "swiper/dist/css/swiper.css"
-import {swiper, swiperSlide} from "vue-awesome-swiper"
+import {Carousel, Slide} from "vue-carousel"
+
 export default {
 	name: "Hero",
 	data() {
 		return {
-			swiperOptionTop: {
-				spaceBetween: 10,
-				loop: true,
-				loopedSlides: 5, //looped slides should be the same
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-			},
-			swiperOptionThumbs: {
-				spaceBetween: 10,
-				slidesPerView: 4,
-				touchRatio: 0.2,
-				loop: true,
-				loopedSlides: 5, //looped slides should be the same
-				slideToClickedSlide: true,
-			},
 			slides: [
 				"https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562370/client-img-10_1_asbbfb.webp",
 				"https://res.cloudinary.com/dgkw9qspp/image/upload/v1571561966/client-img-3_1_qhsxmz.webp",
@@ -68,8 +32,8 @@ export default {
 		}
 	},
 	components: {
-		swiper,
-		swiperSlide,
+		Carousel,
+		Slide,
 	},
 	methods: {
 		isMobile() {
@@ -99,8 +63,4 @@ export default {
 	},
 }
 </script>
-<style lang="scss">
-.swiperThumb .swiper-slide-active {
-	opacity: 0.8;
-}
-</style>
+<style lang="scss"></style>
