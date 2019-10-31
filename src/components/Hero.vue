@@ -17,7 +17,7 @@ export default {
 	name: "Hero",
 	data() {
 		return {
-			slides: [
+			list: [
 				"https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562370/client-img-10_1_asbbfb.webp",
 				"https://res.cloudinary.com/dgkw9qspp/image/upload/v1571561966/client-img-3_1_qhsxmz.webp",
 				"https://res.cloudinary.com/dgkw9qspp/image/upload/v1571562211/client-img-7_1_ik7x2x.webp",
@@ -35,6 +35,12 @@ export default {
 		Carousel,
 		Slide,
 	},
+	computed: {
+		slides() {
+			return this.list
+		},
+	},
+
 	methods: {
 		isMobile() {
 			var check = false
