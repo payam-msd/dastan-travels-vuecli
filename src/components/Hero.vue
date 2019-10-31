@@ -11,9 +11,17 @@
 				</swiper-slide>
 			</swiper>
 			<template v-if="isMobile">
-				<swiper :options="swiperOptionThumbs" class="swiperThumb px-1" ref="swiperThumbs">
+				<swiper
+					:options="swiperOptionThumbs"
+					class="swiperThumb px-1"
+					ref="swiperThumbs"
+				>
 					<swiper-slide v-for="(slide, i) in slides" :key="i" class="`slide-${i}`">
-						<img class="rounded h-20 object-cover bg-center bg-cover w-full md:h-32" :src="slide" alt />
+						<img
+							class="rounded h-20 object-cover bg-center bg-cover w-full md:h-32"
+							:src="slide"
+							alt
+						/>
 					</swiper-slide>
 				</swiper>
 			</template>
@@ -23,12 +31,9 @@
 
 <script>
 import "swiper/dist/css/swiper.css"
-import isMobile from "../isMobile"
-
 import {swiper, swiperSlide} from "vue-awesome-swiper"
 export default {
 	name: "Hero",
-	mixins: [isMobile],
 	data() {
 		return {
 			swiperOptionTop: {
@@ -65,6 +70,38 @@ export default {
 	components: {
 		swiper,
 		swiperSlide,
+	},
+	methods: {
+		isMobile() {
+			///<summary>Detecting whether the browser is a mobile browser or desktop browser</summary>
+			///<returns>A boolean value indicating whether the browser is a mobile browser or not</returns>
+
+			if (sessionStorage.desktop)
+				// desktop storage
+				return false
+			else if (localStorage.mobile)
+				// mobile storage
+				return true
+
+			// alternative
+			var mobile = [
+				"iphone",
+				"ipad",
+				"android",
+				"blackberry",
+				"nokia",
+				"opera mini",
+				"windows mobile",
+				"windows phone",
+				"iemobile",
+			]
+			for (var i in mobile)
+				if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0)
+					return true
+
+			// nothing found.. assume desktop
+			return false
+		},
 	},
 	mounted() {
 		this.$nextTick(() => {
