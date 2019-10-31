@@ -11,17 +11,9 @@
 				</swiper-slide>
 			</swiper>
 			<template v-if="isMobile">
-				<swiper
-					:options="swiperOptionThumbs"
-					class="swiperThumb px-1"
-					ref="swiperThumbs"
-				>
+				<swiper :options="swiperOptionThumbs" class="swiperThumb px-1" ref="swiperThumbs">
 					<swiper-slide v-for="(slide, i) in slides" :key="i" class="`slide-${i}`">
-						<img
-							class="rounded h-20 object-cover bg-center bg-cover w-full md:h-32"
-							:src="slide"
-							alt
-						/>
+						<img class="rounded h-20 object-cover bg-center bg-cover w-full md:h-32" :src="slide" alt />
 					</swiper-slide>
 				</swiper>
 			</template>
