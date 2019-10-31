@@ -10,22 +10,33 @@
 					/>
 				</swiper-slide>
 			</swiper>
-
-			<swiper :options="swiperOptionThumbs" class="swiperThumb px-1" ref="swiperThumbs">
-				<swiper-slide v-for="(slide, i) in slides" :key="i" class="`slide-${i}`">
-					<img class="rounded h-20 object-cover bg-center bg-cover w-full md:h-32" :src="slide" alt />
-				</swiper-slide>
-			</swiper>
+			<template v-if="isMobile">
+				<swiper
+					:options="swiperOptionThumbs"
+					class="swiperThumb px-1"
+					ref="swiperThumbs"
+				>
+					<swiper-slide v-for="(slide, i) in slides" :key="i" class="`slide-${i}`">
+						<img
+							class="rounded h-20 object-cover bg-center bg-cover w-full md:h-32"
+							:src="slide"
+							alt
+						/>
+					</swiper-slide>
+				</swiper>
+			</template>
 		</md-card-media>
 	</md-card>
 </template>
 
 <script>
 import "swiper/dist/css/swiper.css"
+import isMobile from "../isMobile"
 
 import {swiper, swiperSlide} from "vue-awesome-swiper"
 export default {
 	name: "Hero",
+	mixins: [isMobile],
 	data() {
 		return {
 			swiperOptionTop: {
